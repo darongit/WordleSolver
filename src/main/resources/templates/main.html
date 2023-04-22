@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WordleSolver</title>
+    <link rel="shortcut icon" type="image/png" th:href="@{/imgs/favicon.png}"/>
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+    <script type="text/javascript" th:src="@{/js/main.js}"></script>
+</head>
+<body onload="start()">
+<div class="main-part">
+    <div class="input-part">
+        <form class="input-form">
+            <span class="label-text">Valid letters: </span>
+            <br>
+            <input class="valid-letter" type="text" maxlength="1" id="l0" name="l0" placeholder="1" >
+            <input class="valid-letter" type="text" maxlength="1" id="l1" name="l1" placeholder="2" >
+            <input class="valid-letter" type="text" maxlength="1" id="l2" name="l2" placeholder="3" >
+            <input class="valid-letter" type="text" maxlength="1" id="l3" name="l3" placeholder="4" >
+            <input class="valid-letter" type="text" maxlength="1" id="l4" name="l4" placeholder="5" >
+
+            <hr>
+
+            <span class="label-text">Included letters: </span>
+            <br>
+            <input type="text" id="includedLetters" name="includedLetters" maxlength="5" class="letters-box">
+
+            <hr>
+
+            <span class="label-text">Excluded letters: </span>
+            <br>
+            <input type="text" id="excludedLetters" name="excludedLetters" class="letters-box">
+
+            <hr>
+            <br>
+
+            <button type="button" onclick="buttonOnClick()">Check!</button>
+            <br>
+            <br>
+            <hr>
+            <button type="reset">Clear fields</button>
+        </form>
+    </div>
+    <div class="output-part">
+        <div id="output-field">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
