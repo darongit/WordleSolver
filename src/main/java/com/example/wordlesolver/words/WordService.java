@@ -59,4 +59,10 @@ public class WordService {
         }
         return result;
     }
+
+    public void addWords(List<String> words) {
+        for (String word: words) {
+            addWord(word);
+        }
+    }
 }

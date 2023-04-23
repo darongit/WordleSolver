@@ -42,5 +42,4 @@ public class WordConfig implements CommandLineRunner {
         }
         scanner.close();
     }
-
 }
