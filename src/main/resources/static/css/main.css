@@ -64,11 +64,12 @@ button:active {
 
 table {
     /* margin: auto; */
+    margin: 10px;
     font-size: 23px;
     text-align: center;
     border-collapse: collapse;
     /* border-style: hidden; */
-    border-spacing: 3px;
+    border-spacing: 5px;
 }
 
 .body-div {
@@ -83,14 +84,17 @@ table {
 
 .input-part {
     width: 300px;
+    min-height: 750px;
     border-radius: 15px;
     background-color: navy;
 }
 
 .output-part {
-    max-width: 600px;
+    max-width: 800px;
     min-width: 400px;
     min-height: 400px;
+    max-height: 800px;
+    overflow: auto;
     border-radius: 15px;
     background-color: white;
     color: black;
@@ -111,7 +115,6 @@ table {
 }
 
 .label-text {
-
 }
 
 .valid-letter {
@@ -125,4 +128,14 @@ table {
     width: 100%;
     height: 30px;
     letter-spacing: 1ex;
+}
+
+.table-valid-letter {
+    background-color: lightgreen;
+    border-radius: 10px;
+}
+
+.table-included-letter {
+    background-color: yellow;
+    border-radius: 10px;
 }
