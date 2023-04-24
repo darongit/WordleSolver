@@ -15,13 +15,15 @@ function showTable(wordsList) {
     if (wordsList.length == 0) {
         html += "<tr><td>No correct words:(</td></tr>";
     }
-    else {
-        while (true) {
+    else if (wordsList.length == 1) {
+        html += "<tr><td>" + wordsList[0] + "</td></tr>";
+    } else {
+        while (idx < wordsList.length) {
             html += "<tr>"
             for (var i=0; i<lineLimit; i++) {
                 html += "<td>" + wordsList[idx] + "</td>";
                 idx++;
-                if (idx == wordsList.length-1) {
+                if (idx > wordsList.length-1) {
                     break;
                 }
             }
