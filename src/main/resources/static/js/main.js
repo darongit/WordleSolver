@@ -64,7 +64,11 @@ function showTable(wordsList) {
         html += "<tr><td>No correct words:(</td></tr>";
     }
     else if (wordsList.length == 1) {
-        html += "<tr><td>" + colorWord(wordsList[0]) + "</td></tr>";
+        if (wordsList[0]=="no-matches") {
+            html += "<tr><td>" + wordsList[0] + "</td></tr>";
+        } else {
+            html += "<tr><td>" + colorWord(wordsList[0]) + "</td></tr>";
+        }
     } else {
         while (idx < wordsList.length) {
             html += "<tr>"
