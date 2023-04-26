@@ -1,6 +1,6 @@
 var validLettersGlobal = {};
-var includedGlobal;
-var excludedGlobal;
+var includedGlobal = "";
+var excludedGlobal = "";
 
 function emptyFields() {
     var html = "<h1>WordleSoler<h1>" +
@@ -10,6 +10,7 @@ function emptyFields() {
 
 function start() {
     emptyFields();
+    updateGlobals();
 }
 
 function updateGlobals() {
@@ -54,9 +55,6 @@ function colorWord(word) {
 }
 
 function showTable(wordsList) {
-    // console.log(validLettersGlobal);
-    // console.log(includedGlobal);
-    // console.log(excludedGlobal);
     var html = "<table align=\"center\">";
     var lineLimit = 8;
     var idx = 0;

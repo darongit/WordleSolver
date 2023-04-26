@@ -71,7 +71,7 @@ button:active {
 */
 
 table {
-    /* margin: auto; */
+    /* margin: 0 auto; */
     margin: 10px;
     font-size: 23px;
     text-align: center;
@@ -81,7 +81,8 @@ table {
     /* border-spacing: 3em; */
 }
 
-table td, table th table tr{
+table td, table tr{
+    vertical-align: middle;
     padding: 5px;
     border: 1px dotted gray;
 
@@ -111,6 +112,9 @@ table td, table th table tr{
 }
 
 .output-part {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
     max-width: 800px;
     min-width: 400px;
     min-height: 400px;

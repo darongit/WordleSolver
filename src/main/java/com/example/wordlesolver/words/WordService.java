@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class WordService {
@@ -57,12 +58,10 @@ public class WordService {
         if (result.size() == 0) {
             result.add("no-matches");
         }
-        return result;
+        return List.copyOf(Set.copyOf(result)).stream().sorted().toList();
     }
 
     public void addWords(List<String> words) {
-        for (String word: words) {
-            addWord(word);
-        }
+        words.forEach(this::addWord);
     }
 }
