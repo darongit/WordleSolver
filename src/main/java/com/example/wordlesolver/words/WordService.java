@@ -3,9 +3,7 @@ package com.example.wordlesolver.words;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class WordService {
@@ -30,6 +28,7 @@ public class WordService {
                 && query.getExcluded().length() == 0
                 && query.getIncluded().length() == 0) {
             result.add("empty-fields");
+            Collections.sort(result);
             return result;
         }
 
