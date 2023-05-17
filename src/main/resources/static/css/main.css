@@ -159,7 +159,7 @@ table td, table tr{
 }
 
 input[name="includedLetters"] {
-    background-color: yellowgreen !important;
+    background-color: yellow !important;
 }
 
 textarea[name="excludedLetters"] {
