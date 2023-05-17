@@ -2,10 +2,23 @@ var validLettersGlobal = {};
 var includedGlobal = "";
 var excludedGlobal = "";
 
+function colorValidLettersFields() {
+    for (var i=0; i<5; i++) {
+        fieldId = "l" + i;
+        if (document.getElementById(fieldId).value.trim() == "") {
+            document.getElementById(fieldId).style.backgroundColor = "white";
+        } else {
+            document.getElementById(fieldId).style.backgroundColor = "yellowgreen";
+        }
+    }
+}
+
 function emptyFields() {
     var html = "<h1>WordleSoler<h1>" +
     "<h2>Enter the letters in the box on the left and press Check!<h2>";
     document.getElementById("output-field").innerHTML = html;
+    document.getElementById("input-form").reset();
+    colorValidLettersFields();
 }
 
 function start() {

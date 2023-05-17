@@ -24,22 +24,21 @@ function convertPolishChar(letter) {
 function removeNonAlphabeticalChars(event) {
     var keycode = event.which || event.keyCode;
     var polishCharConverted = convertPolishChar(event.key).charCodeAt(0);
-        if(((keycode < 58 || 
+    if(((keycode < 58 ||
         (keycode > 57 && keycode < 65) || 
         (keycode > 90 && keycode < 97) ||
         keycode > 122) && keycode == polishCharConverted)
-       ){
+       ) {
            event.preventDefault();  
            return false;
        }
-       return true;
+    return true;
 }
 
 function validLettersSwitch(event) {
     var key = event.key;
     var oldKey = event.target.value;
-    console.log();
-    if (key != oldKey && preventDuplicates(event, excludedSelector.value && event.keyCode && removeNonAlphabeticalChars(event))) {
+    if (key != oldKey && preventDuplicates(event, excludedSelector.value + event.keyCode) && removeNonAlphabeticalChars(event)) {
         event.target.value = key;
     } else {
         event.target.value = oldKey;
@@ -49,7 +48,7 @@ function validLettersSwitch(event) {
 
 function preventDuplicates(event, lettersSet) {
     var key = event.key;
-    lettersSet += lettersSet.toUpperCase();
+    lettersSet += lettersSet.toUpperCase() + " ";
     if (lettersSet.includes(key)) {
         event.preventDefault();  
         return false;
@@ -59,6 +58,7 @@ function preventDuplicates(event, lettersSet) {
 
 function pressEnter(event) {
     if (event.keyCode == 13) {
+        event.preventDefault();
         buttonOnClick();
     }
 }
