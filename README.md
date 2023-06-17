@@ -1,7 +1,7 @@
 # WordleSolver
 ## demo
 http://darongit.alwaysdata.net/
-Due to the free hosting, it sometimes takes a couple seconds to start and load words for the first time.
+Due to free hosting, it sometimes takes a few seconds to run and load words for the first time.
 
 ## What was the purpose of writing this program
 Improving spring-boot and frontend skills and creating something a bit more complex than my recent projects. In this project mostly I focused on front side. I used Spring Boot, JavaScript, HTML and CSS.
